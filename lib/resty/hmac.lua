@@ -1,9 +1,7 @@
 -- Copyright (C) James Marlowe (jamesmarlowe), Lumate LLC.
-
+-- Modded for crypto.hmac by Ronald A. Richardson (roncodes), Rarbuilt, LLC.
 
 local crypto       =  require("crypto")
-local crypto_hmac  =  require("crypto.hmac")
-
 
 -- obtain a copy of enc() here: http://lua-users.org/wiki/BaseSixtyFour
 function enc(data)
@@ -84,7 +82,7 @@ function _M.generate_signature(self, dtype, message, delimiter)
         return nil, "invalid message"
     end
     
-    local sig_hmac  =  crypto_hmac.digest(dtype, StringToSign, secret, true)
+    local sig_hmac  =  crypto.hmac.digest(dtype, StringToSign, secret, true)
     local signature  =  enc(sig_hmac)
     
     self.StringToSign = StringToSign

@@ -2,14 +2,14 @@ package = "lua-resty-hmac"
 version = "v1.0-1"
 
 source = {
-  url = "git://github.com/jamesmarlowe/lua-resty-hmac.git"
+  url = "git://github.com/roncodes/lua-resty-hmac.git"
 }
 
 description = {
   summary = "HMAC library for Lua and OpenResty",
-  homepage = "https://github.com/jamesmarlowe/lua-resty-hmac",
+  homepage = "https://github.com/roncodes/lua-resty-hmac",
   license = "MIT",
-  maintainer = "jameskmarlowe@gmail.com"
+  maintainer = "ron@rarbuilt.com"
 }
 
 dependencies = {
